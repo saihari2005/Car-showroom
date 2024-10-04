@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1E0C2C; 
+}
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4c542;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: black;
+    font-size: 1.8rem;
+}
+
+
+.dealer-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url('https://www.hdcarwallpapers.com/walls/dodge_challenger_srt_demon_8k-HD.jpg') no-repeat center center/cover;
+}
+
+.dealer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1;
+}
+
+.container {
+    z-index: 2;
+}
+
+.dealer-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: fadeInDown 1s ease-out;
+}
+
+.dealer-description {
+    color: #B0A7C8;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    animation: fadeInDown 1.5s ease-out;
+}
+
+.dealer-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.animated-input {
+    background-color: #32254E;
+    color: #fff;
+    border: none;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-out;
+    border-radius: 5px;
+}
+
+.animated-input::placeholder {
+    color: #AFA5C4;
+}
+
+.dealer-btn {
+    background-color: #BB6BD9;
+    border: none;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    animation: fadeInUp 2.2s ease-out;
+}
+
+.dealer-location-btn {
+    color: #B08DD5;
+    margin-top: 15px;
+    display: block;
+    font-size: 0.9rem;
+    animation: fadeInUp 2.5s ease-out;
+}
+
+.dealer-location-btn:hover {
+    text-decoration: none;
+}
+
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+    </style>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Dealer - SHP Auto Sport</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">SHP AUTO SPORT</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Model.html">Models</a></li>
+            
+            <li><a href="Cardealer.html">Car Dealer</a></li>
+        </ul>
+    </nav>
+    <div class="dealer-section">
+        <div class="container text-center">
+            <h1 class="dealer-title">FIND A DEALER</h1>
+            <p class="dealer-description">
+                You will be directed to the page of our authorized dealers.<br>
+                SHP Auto Sport accepts no liability or responsibility for the information, views, or opinions contained therein.
+            </p>
+            <form action="" class="dealer-form">
+                <div class="form-group">
+                    <input type="text" class="form-control animated-input" placeholder="City" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control animated-input" placeholder="Country" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg dealer-btn">SEARCH</button>
+                <button type="button" class="btn btn-link dealer-location-btn">USE MY LOCATION</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
